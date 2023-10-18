@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
+import Header from "./components/Header/Header";
 
 const merriweather = Merriweather({ weight: ["700"], subsets: ["latin"] });
 
@@ -18,7 +19,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={merriweather.className}>
-                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+                <StyledComponentsRegistry>
+                    <Header />
+                    {children}
+                </StyledComponentsRegistry>
             </body>
         </html>
     );
