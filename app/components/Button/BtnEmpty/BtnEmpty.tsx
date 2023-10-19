@@ -1,7 +1,7 @@
-import { Button } from "./BtnEmpty.styled";
+import { ButtonEmpty } from "./BtnEmpty.styled";
 
 const BtnEmpty = () => {
-    return <Button>Log In</Button>;
+    return <ButtonEmpty>Log In</ButtonEmpty>;
 };
 
 export default BtnEmpty;

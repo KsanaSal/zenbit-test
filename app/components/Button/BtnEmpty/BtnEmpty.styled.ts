@@ -1,6 +1,7 @@
+"use client";
 import { styled } from "styled-components";
 
-export const Button = styled.button`
+export const ButtonEmpty = styled.button`
     color: #b29f7e;
     background-color: transparent;
     border: 1px solid #b29f7e;

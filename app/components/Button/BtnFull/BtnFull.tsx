@@ -1,7 +1,7 @@
-import { Button } from "./BtnFull.styled";
+import { ButtonFull } from "./BtnFull.styled";
 
 const BtnFull = () => {
-    return <Button>Sign Up</Button>;
+    return <ButtonFull>Sign Up</ButtonFull>;
 };
 
 export default BtnFull;

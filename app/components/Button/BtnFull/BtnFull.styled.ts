@@ -1,6 +1,7 @@
+"use client";
 import { styled } from "styled-components";
 
-export const Button = styled.button`
+export const ButtonFull = styled.button`
     color: #fff;
     background-color: #b29f7e;
     border: 1px solid #b29f7e;
