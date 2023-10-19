@@ -6,8 +6,8 @@ import { HeaderStyled } from "../Header.styled";
 const Header = () => {
     return (
         <HeaderStyled>
-            <BtnEmpty />
-            <BtnFull />
+            <BtnEmpty radius={5} text={"Log In"} link={"/login"} />
+            <BtnFull link={"/signup"} />
         </HeaderStyled>
     );
 };

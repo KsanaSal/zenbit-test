@@ -1,10 +1,13 @@
 import { styled } from "styled-components";
 
-export const HeaderStyled = styled.div`
+export const HeaderStyled = styled.header`
     background-color: #172234;
     padding: 20px 24px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 80px;
 
     @media screen and (min-width: 768px) {
         justify-content: flex-end;
