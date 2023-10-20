@@ -7,8 +7,21 @@ export const SectionLogin = styled.section`
 `;
 
 export const ImageLogin = styled.img`
-    width: 890px;
-    height: 100%;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        width: 400px;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 560px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 890px;
+    }
 `;
 
 export const FormLoginBox = styled.div`
@@ -16,8 +29,24 @@ export const FormLoginBox = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin-left: 100px;
-    width: 350px;
+    width: 100%;
+    padding: 0 24px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 50px;
+        width: 250px;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-left: 70px;
+        width: 300px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        margin-left: 100px;
+        width: 350px;
+    }
 `;
 
 export const TitleLogin = styled.h1`
