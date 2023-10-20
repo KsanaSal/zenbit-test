@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const SectionDetails = styled.section`
     background-color: #f2f2f2;
-    padding: 100px 24px;
+    padding: 100px 20px;
 
     @media screen and (min-width: 768px) {
         padding: 120px 40px;
@@ -27,10 +27,6 @@ export const ListBuilding = styled.ul`
         justify-items: center;
         align-items: center;
     }
-
-    /* @media screen and (min-width: 1024px) {
-        padding: 120px 80px;
-    } */
 `;
 
 export const ItemCard = styled.li`
