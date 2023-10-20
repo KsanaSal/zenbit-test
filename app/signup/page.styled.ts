@@ -1,12 +1,12 @@
 import { styled } from "styled-components";
 
-export const SectionLogin = styled.section`
+export const SectionSignup = styled.section`
     background-color: #f0f6ff;
     display: flex;
     height: calc(100vh - 80px);
 `;
 
-export const ImageLogin = styled.img`
+export const ImageSignup = styled.img`
     display: none;
 
     @media screen and (min-width: 768px) {
@@ -24,7 +24,7 @@ export const ImageLogin = styled.img`
     }
 `;
 
-export const FormLoginBox = styled.div`
+export const FormSignupBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,28 +49,28 @@ export const FormLoginBox = styled.div`
     }
 `;
 
-export const TitleLogin = styled.h1`
+export const TitleSignup = styled.h1`
     font-size: 28px;
     color: #172234;
     margin-bottom: 20px;
     text-align: left;
 `;
 
-export const FormLogin = styled.form`
+export const FormSignup = styled.form`
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: 10px;
 `;
 
-export const LabelLogin = styled.label`
+export const LabelSignup = styled.label`
     display: flex;
     flex-direction: column;
     font-size: 14px;
     color: #000;
 `;
 
-export const InputLogin = styled.input`
+export const InputSignup = styled.input`
     border: 1px solid transparent;
     background-color: #e0e0e0;
     border-radius: 5px;
@@ -80,7 +80,7 @@ export const InputLogin = styled.input`
     color: #172234;
 `;
 
-export const LinkLogin = styled.a`
+export const LinkSignup = styled.a`
     color: #b29f7e;
     text-align: end;
     margin-bottom: 30px;
@@ -92,7 +92,7 @@ export const LinkLogin = styled.a`
     }
 `;
 
-export const ButtonLogin = styled.button`
+export const ButtonSignup = styled.button`
     width: 100%;
     background-color: #b29f7e;
     padding: 10px;
@@ -106,7 +106,7 @@ export const ButtonLogin = styled.button`
     }
 `;
 
-export const TextLogin = styled.p`
+export const TextSignup = styled.p`
     color: #172234;
     font-size: 14px;
     margin: 0 auto;

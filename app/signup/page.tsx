@@ -1,62 +1,72 @@
 "use client";
 import {
-    ButtonLogin,
-    FormLogin,
-    FormLoginBox,
-    ImageLogin,
-    InputLogin,
-    LabelLogin,
-    LinkLogin,
-    SectionLogin,
-    TextLogin,
-    TitleLogin,
+    ButtonSignup,
+    FormSignup,
+    FormSignupBox,
+    ImageSignup,
+    InputSignup,
+    LabelSignup,
+    LinkSignup,
+    SectionSignup,
+    TextSignup,
+    TitleSignup,
 } from "./page.styled";
 
-export default function Login() {
+export default function SignUp() {
     return (
         <main className="pt-[80px]">
-            <SectionLogin>
-                <ImageLogin
-                    src="/assets/images/image-login.jpg"
+            <SectionSignup>
+                <ImageSignup
+                    src="/assets/images/image-signup.jpg"
                     alt="Image 1"
                 />
-                <FormLoginBox>
-                    <TitleLogin>Login</TitleLogin>
-                    <FormLogin>
-                        <LabelLogin className="mb-[20px]">
+                <FormSignupBox>
+                    <TitleSignup>Sign up</TitleSignup>
+                    <FormSignup>
+                        <LabelSignup className="mb-[20px]">
+                            Name
+                            <InputSignup
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                autoComplete="off"
+                                className="font-regular font-Lato leading-[22px]"
+                            />
+                        </LabelSignup>
+                        <LabelSignup className="mb-[20px]">
                             Email
-                            <InputLogin
+                            <InputSignup
                                 type="email"
                                 name="email"
                                 placeholder="Email"
                                 autoComplete="off"
                                 className="font-regular font-Lato leading-[22px]"
                             />
-                        </LabelLogin>
-                        <LabelLogin className="mb-[10px]">
+                        </LabelSignup>
+                        <LabelSignup className="mb-[10px]">
                             Password
-                            <InputLogin
+                            <InputSignup
                                 type="password"
                                 name="password"
                                 placeholder="Password"
                                 autoComplete="off"
                                 className="font-regular font-Lato leading-[22px]"
                             />
-                        </LabelLogin>
-                        <LinkLogin
+                        </LabelSignup>
+                        <LinkSignup
                             href="#"
                             className="font-bolt font-Lato leading-[22px]"
                         >
                             Forgot password?
-                        </LinkLogin>
-                        <ButtonLogin type="submit">Sign In</ButtonLogin>
-                    </FormLogin>
-                    <TextLogin className="font-bolt font-Lato leading-[22px]">
+                        </LinkSignup>
+                        <ButtonSignup type="submit">Sign Up</ButtonSignup>
+                    </FormSignup>
+                    <TextSignup className="font-bolt font-Lato leading-[22px]">
                         Don’t have account?{" "}
-                        <LinkLogin href="/signup">Sign Up</LinkLogin>
-                    </TextLogin>
-                </FormLoginBox>
-            </SectionLogin>
+                        <LinkSignup href="/login">Sign Ip</LinkSignup>
+                    </TextSignup>
+                </FormSignupBox>
+            </SectionSignup>
         </main>
     );
 }
