@@ -15,16 +15,25 @@ export const SectionHome = styled.section`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 0 24px;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 40px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 0 80px;
+    }
 `;
 
 export const Title = styled.h1`
-    font-size: 48px;
+    font-size: 36px;
     color: #fff;
     text-align: center;
     margin-bottom: 10px;
 
     @media screen and (min-width: 768px) {
-        font-size: 52px;
+        font-size: 50px;
     }
 
     @media screen and (min-width: 1024px) {

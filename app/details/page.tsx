@@ -1,92 +1,103 @@
 "use client";
 import Image from "next/image";
-import { SectionDetails } from "./page.styled";
+import {
+    ImageCard,
+    ItemCard,
+    ListBuilding,
+    SectionDetails,
+    TextBox,
+    TextInform,
+    TextInformItem,
+    TitleCard,
+} from "./page.styled";
 
 export default function Details() {
     return (
-        <SectionDetails>
-            <ul>
-                <li>
-                    <Image
-                        src="/assets/images/imagesDetails/image-1.jpg"
-                        alt="Image 1"
-                        width={630}
-                        height={400}
-                    />
-                    <div>
-                        <h2>The Marina Torch</h2>
-                        <ul>
-                            <li>6 500 000 Dhs</li>
-                            <li>Yield 9.25%</li>
-                            <li>Sold 75%</li>
-                        </ul>
-                        <ul>
-                            <li>Tiket - 60 000 Dhs</li>
-                            <li>Days left 150 </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <Image
-                        src="/assets/images/imagesDetails/image-2.jpg"
-                        alt="Image 2"
-                        width={630}
-                        height={400}
-                    />
-                    <div>
-                        <h2>The Marina Torch</h2>
-                        <ul>
-                            <li>6 500 000 Dhs</li>
-                            <li>Yield 9.25%</li>
-                            <li>Sold 75%</li>
-                        </ul>
-                        <ul>
-                            <li>Tiket - 60 000 Dhs</li>
-                            <li>Days left 150 </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <Image
-                        src="/assets/images/imagesDetails/image-3.jpg"
-                        alt="Image 3"
-                        width={630}
-                        height={400}
-                    />
-                    <div>
-                        <h2>The Marina Torch</h2>
-                        <ul>
-                            <li>6 500 000 Dhs</li>
-                            <li>Yield 9.25%</li>
-                            <li>Sold 75%</li>
-                        </ul>
-                        <ul>
-                            <li>Tiket - 60 000 Dhs</li>
-                            <li>Days left 150 </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <Image
-                        src="/assets/images/imagesDetails/image-4.jpg"
-                        alt="Image 4"
-                        width={630}
-                        height={400}
-                    />
-                    <div>
-                        <h2>The Marina Torch</h2>
-                        <ul>
-                            <li>6 500 000 Dhs</li>
-                            <li>Yield 9.25%</li>
-                            <li>Sold 75%</li>
-                        </ul>
-                        <ul>
-                            <li>Tiket - 60 000 Dhs</li>
-                            <li>Days left 150 </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </SectionDetails>
+        <main>
+            <SectionDetails>
+                <ListBuilding>
+                    <ItemCard>
+                        <ImageCard
+                            src="/assets/images/imagesDetails/image-1.jpg"
+                            alt="Image 1"
+                        />
+                        <TextBox>
+                            <TitleCard>The Marina Torch</TitleCard>
+                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                <TextInformItem>6 500 000 Dhs</TextInformItem>
+                                <TextInformItem>Yield 9.25%</TextInformItem>
+                                <TextInformItem>Sold 75%</TextInformItem>
+                            </TextInform>
+                            <TextInform className="font-bold font-Lato leading-[22px]">
+                                <TextInformItem>
+                                    Tiket - 60 000 Dhs
+                                </TextInformItem>
+                                <TextInformItem>Days left 150 </TextInformItem>
+                            </TextInform>
+                        </TextBox>
+                    </ItemCard>
+                    <ItemCard>
+                        <ImageCard
+                            src="/assets/images/imagesDetails/image-2.jpg"
+                            alt="Image 2"
+                        />
+                        <TextBox>
+                            <TitleCard>The Marina Torch</TitleCard>
+                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                <TextInformItem>6 500 000 Dhs</TextInformItem>
+                                <TextInformItem>Yield 9.25%</TextInformItem>
+                                <TextInformItem>Sold 75%</TextInformItem>
+                            </TextInform>
+                            <TextInform className="font-bold font-Lato leading-[22px]">
+                                <TextInformItem>
+                                    Tiket - 60 000 Dhs
+                                </TextInformItem>
+                                <TextInformItem>Days left 150 </TextInformItem>
+                            </TextInform>
+                        </TextBox>
+                    </ItemCard>
+                    <ItemCard>
+                        <ImageCard
+                            src="/assets/images/imagesDetails/image-3.jpg"
+                            alt="Image 3"
+                        />
+                        <TextBox>
+                            <TitleCard>The Marina Torch</TitleCard>
+                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                <TextInformItem>6 500 000 Dhs</TextInformItem>
+                                <TextInformItem>Yield 9.25%</TextInformItem>
+                                <TextInformItem>Sold 75%</TextInformItem>
+                            </TextInform>
+                            <TextInform className="font-bold font-Lato leading-[22px]">
+                                <TextInformItem>
+                                    Tiket - 60 000 Dhs
+                                </TextInformItem>
+                                <TextInformItem>Days left 150 </TextInformItem>
+                            </TextInform>
+                        </TextBox>
+                    </ItemCard>
+                    <ItemCard>
+                        <ImageCard
+                            src="/assets/images/imagesDetails/image-4.jpg"
+                            alt="Image 4"
+                        />
+                        <TextBox>
+                            <TitleCard>The Marina Torch</TitleCard>
+                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                <TextInformItem>6 500 000 Dhs</TextInformItem>
+                                <TextInformItem>Yield 9.25%</TextInformItem>
+                                <TextInformItem>Sold 75%</TextInformItem>
+                            </TextInform>
+                            <TextInform className="font-bold font-Lato leading-[22px]">
+                                <TextInformItem>
+                                    Tiket - 60 000 Dhs
+                                </TextInformItem>
+                                <TextInformItem>Days left 150 </TextInformItem>
+                            </TextInform>
+                        </TextBox>
+                    </ItemCard>
+                </ListBuilding>
+            </SectionDetails>
+        </main>
     );
 }
