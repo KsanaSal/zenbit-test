@@ -13,7 +13,12 @@ export default function Home() {
                     not formed. The chemical compound is negatively charged.
                     Twhile the mass defect is
                 </Text>
-                <BtnEmpty radius={8} text={"Get Started"} link={"/details"} />
+                <BtnEmpty
+                    radius={8}
+                    text={"Get Started"}
+                    link={"/details"}
+                    title={"Details page"}
+                />
             </SectionHome>
         </main>
     );
