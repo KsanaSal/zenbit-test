@@ -63,7 +63,7 @@ export default function SignUp() {
                     </FormSignup>
                     <TextSignup className="font-bolt font-Lato leading-[22px]">
                         Don’t have account?{" "}
-                        <LinkSignup href="/login">Sign Ip</LinkSignup>
+                        <LinkSignup href="/login">Sign In</LinkSignup>
                     </TextSignup>
                 </FormSignupBox>
             </SectionSignup>
