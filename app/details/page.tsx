@@ -7,6 +7,7 @@ import {
     SectionDetails,
     TextBox,
     TextInform,
+    TextInformBox,
     TextInformItem,
     TitleCard,
 } from "./page.styled";
@@ -23,17 +24,23 @@ export default function Details() {
                         />
                         <TextBox>
                             <TitleCard>The Marina Torch</TitleCard>
-                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                <TextInformItem>6 500 000 Dhs</TextInformItem>
-                                <TextInformItem>Yield 9.25%</TextInformItem>
-                                <TextInformItem>Sold 75%</TextInformItem>
-                            </TextInform>
-                            <TextInform className="font-bold font-Lato leading-[22px]">
-                                <TextInformItem>
-                                    Tiket - 60 000 Dhs
-                                </TextInformItem>
-                                <TextInformItem>Days left 150 </TextInformItem>
-                            </TextInform>
+                            <TextInformBox>
+                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                    <TextInformItem>
+                                        6 500 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>Yield 9.25%</TextInformItem>
+                                    <TextInformItem>Sold 75%</TextInformItem>
+                                </TextInform>
+                                <TextInform className="font-bold font-Lato leading-[22px]">
+                                    <TextInformItem>
+                                        Tiket - 60 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>
+                                        Days left 150{" "}
+                                    </TextInformItem>
+                                </TextInform>
+                            </TextInformBox>
                         </TextBox>
                     </ItemCard>
                     <ItemCard>
@@ -43,17 +50,23 @@ export default function Details() {
                         />
                         <TextBox>
                             <TitleCard>The Marina Torch</TitleCard>
-                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                <TextInformItem>6 500 000 Dhs</TextInformItem>
-                                <TextInformItem>Yield 9.25%</TextInformItem>
-                                <TextInformItem>Sold 75%</TextInformItem>
-                            </TextInform>
-                            <TextInform className="font-bold font-Lato leading-[22px]">
-                                <TextInformItem>
-                                    Tiket - 60 000 Dhs
-                                </TextInformItem>
-                                <TextInformItem>Days left 150 </TextInformItem>
-                            </TextInform>
+                            <TextInformBox>
+                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                    <TextInformItem>
+                                        6 500 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>Yield 9.25%</TextInformItem>
+                                    <TextInformItem>Sold 75%</TextInformItem>
+                                </TextInform>
+                                <TextInform className="font-bold font-Lato leading-[22px]">
+                                    <TextInformItem>
+                                        Tiket - 60 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>
+                                        Days left 150{" "}
+                                    </TextInformItem>
+                                </TextInform>
+                            </TextInformBox>
                         </TextBox>
                     </ItemCard>
                     <ItemCard>
@@ -63,17 +76,23 @@ export default function Details() {
                         />
                         <TextBox>
                             <TitleCard>The Marina Torch</TitleCard>
-                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                <TextInformItem>6 500 000 Dhs</TextInformItem>
-                                <TextInformItem>Yield 9.25%</TextInformItem>
-                                <TextInformItem>Sold 75%</TextInformItem>
-                            </TextInform>
-                            <TextInform className="font-bold font-Lato leading-[22px]">
-                                <TextInformItem>
-                                    Tiket - 60 000 Dhs
-                                </TextInformItem>
-                                <TextInformItem>Days left 150 </TextInformItem>
-                            </TextInform>
+                            <TextInformBox>
+                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                    <TextInformItem>
+                                        6 500 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>Yield 9.25%</TextInformItem>
+                                    <TextInformItem>Sold 75%</TextInformItem>
+                                </TextInform>
+                                <TextInform className="font-bold font-Lato leading-[22px]">
+                                    <TextInformItem>
+                                        Tiket - 60 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>
+                                        Days left 150{" "}
+                                    </TextInformItem>
+                                </TextInform>
+                            </TextInformBox>
                         </TextBox>
                     </ItemCard>
                     <ItemCard>
@@ -83,17 +102,23 @@ export default function Details() {
                         />
                         <TextBox>
                             <TitleCard>The Marina Torch</TitleCard>
-                            <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                <TextInformItem>6 500 000 Dhs</TextInformItem>
-                                <TextInformItem>Yield 9.25%</TextInformItem>
-                                <TextInformItem>Sold 75%</TextInformItem>
-                            </TextInform>
-                            <TextInform className="font-bold font-Lato leading-[22px]">
-                                <TextInformItem>
-                                    Tiket - 60 000 Dhs
-                                </TextInformItem>
-                                <TextInformItem>Days left 150 </TextInformItem>
-                            </TextInform>
+                            <TextInformBox>
+                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                    <TextInformItem>
+                                        6 500 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>Yield 9.25%</TextInformItem>
+                                    <TextInformItem>Sold 75%</TextInformItem>
+                                </TextInform>
+                                <TextInform className="font-bold font-Lato leading-[22px]">
+                                    <TextInformItem>
+                                        Tiket - 60 000 Dhs
+                                    </TextInformItem>
+                                    <TextInformItem>
+                                        Days left 150{" "}
+                                    </TextInformItem>
+                                </TextInform>
+                            </TextInformBox>
                         </TextBox>
                     </ItemCard>
                 </ListBuilding>
