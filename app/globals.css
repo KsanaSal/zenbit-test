@@ -12,18 +12,15 @@
     html {
         @apply font-serif;
         box-sizing: border-box;
-        overflow: hidden;
     }
     body {
         margin: 0 auto;
         padding: 0;
-        max-width: 1440px;
-        max-height: 100vw;
+        max-height: 100vh;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.25;
-        overflow: hidden;
     }
     img {
         display: block;
