@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import {
     ButtonLogin,
     FormLogin,
@@ -12,6 +12,7 @@ import {
     TextLogin,
     TitleLogin,
 } from "./page.styled";
+import { useRouter } from "next/navigation";
 
 const initialFormData = {
     email: "",
@@ -19,6 +20,52 @@ const initialFormData = {
 };
 
 export default function Login() {
+    const [formData, setFormData] = useState(initialFormData);
+    const router = useRouter();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("http://localhost:3000/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    password: formData.password,
+                    email: formData.email,
+                }),
+            });
+            if (response.status === 200) {
+                response.json().then((data) => {
+                    window.localStorage.setItem("token", data.result.token);
+                    router.push("/");
+                    console.log(
+                        "Registration was successful",
+                        data.result.token
+                    );
+                });
+            } else if (response.status === 409) {
+                console.error("Username already exists");
+            } else {
+                console.error("An error occurred during registration");
+            }
+        } catch (error) {
+            console.error(
+                "An error occurred while sending data to the server",
+                error
+            );
+        }
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
     return (
         <main className="pt-[80px]">
             <SectionLogin>
@@ -28,7 +75,7 @@ export default function Login() {
                 />
                 <FormLoginBox>
                     <TitleLogin>Login</TitleLogin>
-                    <FormLogin>
+                    <FormLogin onSubmit={handleSubmit}>
                         <LabelLogin className="mb-[20px]">
                             Email
                             <InputLogin
@@ -37,6 +84,8 @@ export default function Login() {
                                 placeholder="Email"
                                 autoComplete="off"
                                 className="font-regular font-Lato leading-[22px]"
+                                value={formData.email}
+                                onChange={handleInputChange}
                             />
                         </LabelLogin>
                         <LabelLogin className="mb-[10px]">
@@ -47,6 +96,8 @@ export default function Login() {
                                 placeholder="Password"
                                 autoComplete="off"
                                 className="font-regular font-Lato leading-[22px]"
+                                value={formData.password}
+                                onChange={handleInputChange}
                             />
                         </LabelLogin>
                         <LinkLogin

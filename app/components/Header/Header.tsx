@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import jwt_decode from "jwt-decode";
 import BtnEmpty from "../Button/BtnEmpty/BtnEmpty";
 import BtnFull from "../Button/BtnFull/BtnFull";
@@ -7,8 +7,10 @@ import { ButtonFull, HeaderStyled, NameText, Wrapper } from "../Header.styled";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-    const router = usePathname();
+    const pathName = usePathname();
     const [userName, setUserName] = useState("");
+    const router = useRouter();
+
     useEffect(() => {
         const token = window.localStorage.getItem("token");
         console.log(token);
@@ -22,7 +24,13 @@ const Header = () => {
             console.log(name);
             setUserName(name);
         }
-    }, [router]);
+    }, [pathName]);
+
+    const handleLogout = () => {
+        window.localStorage.removeItem("token");
+        router.push("/login");
+        setUserName("");
+    };
 
     return (
         <HeaderStyled>
@@ -30,12 +38,14 @@ const Header = () => {
                 <>
                     <Wrapper>
                         <NameText>{userName}</NameText>
-                        <ButtonFull type="button">Log out</ButtonFull>
+                        <ButtonFull type="button" onClick={handleLogout}>
+                            Log out
+                        </ButtonFull>
                     </Wrapper>
                 </>
             ) : (
                 <>
-                    {router !== "/login" && router !== "/signup" && (
+                    {pathName !== "/login" && pathName !== "/signup" && (
                         <>
                             <BtnEmpty
                                 radius={5}
