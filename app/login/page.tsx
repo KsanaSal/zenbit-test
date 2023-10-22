@@ -13,6 +13,11 @@ import {
     TitleLogin,
 } from "./page.styled";
 
+const initialFormData = {
+    email: "",
+    password: "",
+};
+
 export default function Login() {
     return (
         <main className="pt-[80px]">
