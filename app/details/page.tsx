@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import {
     ImageCard,
     ItemCard,
@@ -11,115 +12,64 @@ import {
     TitleCard,
 } from "./page.styled";
 
+interface Card {
+    id: number;
+    image: string;
+    title: string;
+    price: number;
+    yield: number;
+    sold: number;
+    tiket: number;
+    daysLeft: number;
+    usersId: number;
+}
+
 export default function Details() {
+    const [cards, setCards] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/deals/all")
+            .then((response) => response.json())
+            .then((data) => {
+                setCards(data.data);
+                console.log(data.data);
+            });
+    }, []);
+
     return (
         <main>
             <SectionDetails>
                 <ListBuilding>
-                    <ItemCard>
-                        <ImageCard
-                            src="/assets/images/imagesDetails/image-1.jpg"
-                            alt="Image 1"
-                        />
-                        <TextBox>
-                            <TitleCard>The Marina Torch</TitleCard>
-                            <TextInformBox>
-                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                    <TextInformItem>
-                                        6 500 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>Yield 9.25%</TextInformItem>
-                                    <TextInformItem>Sold 75%</TextInformItem>
-                                </TextInform>
-                                <TextInform className="font-bold font-Lato leading-[22px]">
-                                    <TextInformItem>
-                                        Tiket - 60 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>
-                                        Days left 150{" "}
-                                    </TextInformItem>
-                                </TextInform>
-                            </TextInformBox>
-                        </TextBox>
-                    </ItemCard>
-                    <ItemCard>
-                        <ImageCard
-                            src="/assets/images/imagesDetails/image-2.jpg"
-                            alt="Image 2"
-                        />
-                        <TextBox>
-                            <TitleCard>The Marina Torch</TitleCard>
-                            <TextInformBox>
-                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                    <TextInformItem>
-                                        6 500 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>Yield 9.25%</TextInformItem>
-                                    <TextInformItem>Sold 75%</TextInformItem>
-                                </TextInform>
-                                <TextInform className="font-bold font-Lato leading-[22px]">
-                                    <TextInformItem>
-                                        Tiket - 60 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>
-                                        Days left 150{" "}
-                                    </TextInformItem>
-                                </TextInform>
-                            </TextInformBox>
-                        </TextBox>
-                    </ItemCard>
-                    <ItemCard>
-                        <ImageCard
-                            src="/assets/images/imagesDetails/image-3.jpg"
-                            alt="Image 3"
-                        />
-                        <TextBox>
-                            <TitleCard>The Marina Torch</TitleCard>
-                            <TextInformBox>
-                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                    <TextInformItem>
-                                        6 500 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>Yield 9.25%</TextInformItem>
-                                    <TextInformItem>Sold 75%</TextInformItem>
-                                </TextInform>
-                                <TextInform className="font-bold font-Lato leading-[22px]">
-                                    <TextInformItem>
-                                        Tiket - 60 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>
-                                        Days left 150{" "}
-                                    </TextInformItem>
-                                </TextInform>
-                            </TextInformBox>
-                        </TextBox>
-                    </ItemCard>
-                    <ItemCard>
-                        <ImageCard
-                            src="/assets/images/imagesDetails/image-4.jpg"
-                            alt="Image 4"
-                        />
-                        <TextBox>
-                            <TitleCard>The Marina Torch</TitleCard>
-                            <TextInformBox>
-                                <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
-                                    <TextInformItem>
-                                        6 500 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>Yield 9.25%</TextInformItem>
-                                    <TextInformItem>Sold 75%</TextInformItem>
-                                </TextInform>
-                                <TextInform className="font-bold font-Lato leading-[22px]">
-                                    <TextInformItem>
-                                        Tiket - 60 000 Dhs
-                                    </TextInformItem>
-                                    <TextInformItem>
-                                        Days left 150{" "}
-                                    </TextInformItem>
-                                </TextInform>
-                            </TextInformBox>
-                        </TextBox>
-                    </ItemCard>
+                    {cards.length > 0 &&
+                        cards.map((card: Card) => (
+                            <ItemCard key={card.id}>
+                                <ImageCard src={card.image} alt={card.title} />
+                                <TextBox>
+                                    <TitleCard>{card.title}</TitleCard>
+                                    <TextInformBox>
+                                        <TextInform className="font-bold font-Lato leading-[22px] mb-[10px]">
+                                            <TextInformItem>
+                                                {card.price} Dhs
+                                            </TextInformItem>
+                                            <TextInformItem>
+                                                Yield {card.yield}%
+                                            </TextInformItem>
+                                            <TextInformItem>
+                                                Sold {card.sold}%
+                                            </TextInformItem>
+                                        </TextInform>
+                                        <TextInform className="font-bold font-Lato leading-[22px]">
+                                            <TextInformItem>
+                                                Tiket - {card.tiket} Dhs
+                                            </TextInformItem>
+                                            <TextInformItem>
+                                                Days left {card.daysLeft}{" "}
+                                            </TextInformItem>
+                                        </TextInform>
+                                    </TextInformBox>
+                                </TextBox>
+                            </ItemCard>
+                        ))}
                 </ListBuilding>
             </SectionDetails>
         </main>
