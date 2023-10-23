@@ -33,7 +33,6 @@ export default function Details() {
             .then((response) => response.json())
             .then((data) => {
                 setCards(data.data);
-                console.log(data.data);
             });
     }, []);
 

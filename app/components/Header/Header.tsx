@@ -13,7 +13,6 @@ const Header = () => {
 
     useEffect(() => {
         const token = window.localStorage.getItem("token");
-        console.log(token);
 
         if (token) {
             const name = jwt_decode<{
@@ -21,7 +20,6 @@ const Header = () => {
                 iat: number;
                 exp: number;
             }>(token).username;
-            console.log(name);
             setUserName(name);
         }
     }, [pathName]);
