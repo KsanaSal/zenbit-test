@@ -26,9 +26,10 @@ interface Card {
 
 export default function Details() {
     const [cards, setCards] = useState([]);
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     useEffect(() => {
-        fetch("http://localhost:3000/deals/all")
+        fetch(`${apiUrl}/deals/all`)
             .then((response) => response.json())
             .then((data) => {
                 setCards(data.data);

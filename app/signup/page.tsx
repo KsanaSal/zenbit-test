@@ -27,20 +27,18 @@ export default function SignUp() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch(
-                "http://localhost:3000/auth/register",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        username: formData.name,
-                        password: formData.password,
-                        email: formData.email,
-                    }),
-                }
-            );
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+            const response = await fetch(`${apiUrl}/auth/register`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username: formData.name,
+                    password: formData.password,
+                    email: formData.email,
+                }),
+            });
             if (response.status === 200) {
                 response.json().then((data) => {
                     window.localStorage.setItem("token", data.result.token);
